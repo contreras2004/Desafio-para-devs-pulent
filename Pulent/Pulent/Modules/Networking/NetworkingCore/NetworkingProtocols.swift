@@ -10,14 +10,15 @@ import Alamofire
 import Foundation
 
 //This lets us configure many servers if there will be more than 1
+//the sample URL is: https://itunes.apple.com/search?term=in+utero&mediaType=music&limit=20
+
 protocol Server{
     var urlComponents: URLComponents {get}
 }
 
-protocol Endpoint: URLComponents {
-    var server : Server{get}//URLComponents {get}
-    var apiVersion : ApiVersion? {get}
-    var serverObject : ServerObject {get}
+protocol Endpoint {
+    var server : Server{get}
+    var api : Api? {get}
     var method : HTTPMethod {get}
 }
 

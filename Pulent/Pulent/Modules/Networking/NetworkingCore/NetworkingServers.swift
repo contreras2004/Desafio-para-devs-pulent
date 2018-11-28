@@ -9,13 +9,14 @@
 import Foundation
 
 //Add here all the servers that we are going to fetch... it will be just 1 in this case
+//the sample URL is: https://itunes.apple.com/search?term=in+utero&mediaType=music&limit=20
 
-struct DefaultServer: Server {
+struct ServerDefault: Server {
     public var urlComponents: URLComponents {
         get{
             var components = URLComponents()
             components.scheme = "https"
-            components.host = "itunes.apple..com"
+            components.host = "itunes.apple.com"
             return components
         }
     }

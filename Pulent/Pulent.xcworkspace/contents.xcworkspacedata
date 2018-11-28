@@ -2,9 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:/Users/matiascontreras/Documents/Repos/Desafio-para-devs-pulent/Pulent/Pulent/Extensions.swift">
-   </FileRef>
-   <FileRef
       location = "group:Pulent.xcodeproj">
    </FileRef>
    <FileRef

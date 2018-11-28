@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		11C66A1DBC999C821D5793ED /* Pods_PulentTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20810EE934C94C2C96F7D828 /* Pods_PulentTests.framework */; };
+		2C1851CA21AF55C00046C1E1 /* SongsEnpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1851C921AF55C00046C1E1 /* SongsEnpoints.swift */; };
+		2C1851CC21AF56800046C1E1 /* SongsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1851CB21AF56800046C1E1 /* SongsManager.swift */; };
 		2CAF00D221AF2E85005D8ACF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAF00D121AF2E85005D8ACF /* AppDelegate.swift */; };
 		2CAF00D421AF2E85005D8ACF /* SongsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAF00D321AF2E85005D8ACF /* SongsViewController.swift */; };
 		2CAF00D721AF2E85005D8ACF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CAF00D521AF2E85005D8ACF /* Main.storyboard */; };
@@ -52,6 +54,8 @@
 		0A1F0A0282E61A0A4BDFA751 /* Pods_PulentUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PulentUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A6752F4964D2A33B94D280C /* Pods-PulentTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PulentTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PulentTests/Pods-PulentTests.release.xcconfig"; sourceTree = "<group>"; };
 		20810EE934C94C2C96F7D828 /* Pods_PulentTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PulentTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C1851C921AF55C00046C1E1 /* SongsEnpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongsEnpoints.swift; sourceTree = "<group>"; };
+		2C1851CB21AF56800046C1E1 /* SongsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongsManager.swift; sourceTree = "<group>"; };
 		2CAF00CE21AF2E85005D8ACF /* Pulent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pulent.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CAF00D121AF2E85005D8ACF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2CAF00D321AF2E85005D8ACF /* SongsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongsViewController.swift; sourceTree = "<group>"; };
@@ -70,7 +74,7 @@
 		2CAF010B21AF3486005D8ACF /* SongCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongCollectionViewCell.swift; sourceTree = "<group>"; };
 		2CAF010C21AF3486005D8ACF /* SongCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SongCollectionViewCell.xib; sourceTree = "<group>"; };
 		2CAF010F21AF34C4005D8ACF /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
-		2CAF011121AF358D005D8ACF /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = "/Users/matiascontreras/Documents/Repos/Desafio-para-devs-pulent/Pulent/Pulent/Extensions.swift"; sourceTree = "<absolute>"; };
+		2CAF011121AF358D005D8ACF /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = "/Users/MatiasContreras/Documents/Pega/Repos/Desafio-para-devs-pulent/Pulent/Pulent/Extensions.swift"; sourceTree = "<absolute>"; };
 		2CAF011421AF3923005D8ACF /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		2CAF011821AF3A36005D8ACF /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		2CAF011C21AF3BB7005D8ACF /* NetworkingProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingProtocols.swift; sourceTree = "<group>"; };
@@ -111,6 +115,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C1851C621AF55840046C1E1 /* NetworkingCore */ = {
+			isa = PBXGroup;
+			children = (
+				2CAF011C21AF3BB7005D8ACF /* NetworkingProtocols.swift */,
+				2CAF011E21AF3BFA005D8ACF /* NetworkingEnums.swift */,
+				2CAF012021AF3C9B005D8ACF /* NetworkingServers.swift */,
+			);
+			path = NetworkingCore;
+			sourceTree = "<group>";
+		};
+		2C1851C721AF55950046C1E1 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				2C1851CB21AF56800046C1E1 /* SongsManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		2C1851C821AF559D0046C1E1 /* EndpointStructures */ = {
+			isa = PBXGroup;
+			children = (
+				2C1851C921AF55C00046C1E1 /* SongsEnpoints.swift */,
+			);
+			path = EndpointStructures;
+			sourceTree = "<group>";
+		};
 		2CAF00C521AF2E85005D8ACF = {
 			isa = PBXGroup;
 			children = (
@@ -232,9 +262,9 @@
 		2CAF011B21AF3B38005D8ACF /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				2CAF011C21AF3BB7005D8ACF /* NetworkingProtocols.swift */,
-				2CAF011E21AF3BFA005D8ACF /* NetworkingEnums.swift */,
-				2CAF012021AF3C9B005D8ACF /* NetworkingServers.swift */,
+				2C1851C821AF559D0046C1E1 /* EndpointStructures */,
+				2C1851C721AF55950046C1E1 /* Managers */,
+				2C1851C621AF55840046C1E1 /* NetworkingCore */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -482,6 +512,7 @@
 				2CAF00D421AF2E85005D8ACF /* SongsViewController.swift in Sources */,
 				2CAF011F21AF3BFA005D8ACF /* NetworkingEnums.swift in Sources */,
 				2CAF011221AF358D005D8ACF /* Extensions.swift in Sources */,
+				2C1851CA21AF55C00046C1E1 /* SongsEnpoints.swift in Sources */,
 				2CAF011521AF3923005D8ACF /* BaseViewController.swift in Sources */,
 				2CAF010D21AF3486005D8ACF /* SongCollectionViewCell.swift in Sources */,
 				2CAF012121AF3C9B005D8ACF /* NetworkingServers.swift in Sources */,
@@ -489,6 +520,7 @@
 				2CAF00D221AF2E85005D8ACF /* AppDelegate.swift in Sources */,
 				2CAF011021AF34C4005D8ACF /* Song.swift in Sources */,
 				2CAF011D21AF3BB7005D8ACF /* NetworkingProtocols.swift in Sources */,
+				2C1851CC21AF56800046C1E1 /* SongsManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
