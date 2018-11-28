@@ -209,9 +209,25 @@
 		2CAF011721AF399B005D8ACF /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				2CAF00D321AF2E85005D8ACF /* SongsViewController.swift */,
+				2CAF011A21AF3B22005D8ACF /* Songs */,
+				2CAF011B21AF3B38005D8ACF /* Networking */,
 			);
 			path = Modules;
+			sourceTree = "<group>";
+		};
+		2CAF011A21AF3B22005D8ACF /* Songs */ = {
+			isa = PBXGroup;
+			children = (
+				2CAF00D321AF2E85005D8ACF /* SongsViewController.swift */,
+			);
+			path = Songs;
+			sourceTree = "<group>";
+		};
+		2CAF011B21AF3B38005D8ACF /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 		66186B0A25A9643FB14E38DC /* Frameworks */ = {
