@@ -9,12 +9,18 @@
 /* Begin PBXBuildFile section */
 		11C66A1DBC999C821D5793ED /* Pods_PulentTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20810EE934C94C2C96F7D828 /* Pods_PulentTests.framework */; };
 		2CAF00D221AF2E85005D8ACF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAF00D121AF2E85005D8ACF /* AppDelegate.swift */; };
-		2CAF00D421AF2E85005D8ACF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAF00D321AF2E85005D8ACF /* ViewController.swift */; };
+		2CAF00D421AF2E85005D8ACF /* SongsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAF00D321AF2E85005D8ACF /* SongsViewController.swift */; };
 		2CAF00D721AF2E85005D8ACF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CAF00D521AF2E85005D8ACF /* Main.storyboard */; };
 		2CAF00D921AF2E87005D8ACF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CAF00D821AF2E87005D8ACF /* Assets.xcassets */; };
 		2CAF00DC21AF2E87005D8ACF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CAF00DA21AF2E87005D8ACF /* LaunchScreen.storyboard */; };
 		2CAF00E721AF2E88005D8ACF /* PulentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAF00E621AF2E88005D8ACF /* PulentTests.swift */; };
 		2CAF00F221AF2E88005D8ACF /* PulentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAF00F121AF2E88005D8ACF /* PulentUITests.swift */; };
+		2CAF010621AF32B2005D8ACF /* SongsCollectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CAF010521AF32B2005D8ACF /* SongsCollectionView.xib */; };
+		2CAF010821AF32D1005D8ACF /* SongsCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAF010721AF32D1005D8ACF /* SongsCollectionView.swift */; };
+		2CAF010D21AF3486005D8ACF /* SongCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAF010B21AF3486005D8ACF /* SongCollectionViewCell.swift */; };
+		2CAF010E21AF3486005D8ACF /* SongCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CAF010C21AF3486005D8ACF /* SongCollectionViewCell.xib */; };
+		2CAF011021AF34C4005D8ACF /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAF010F21AF34C4005D8ACF /* Song.swift */; };
+		2CAF011221AF358D005D8ACF /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAF011121AF358D005D8ACF /* Extensions.swift */; };
 		5B4FE61992FEF257668E9478 /* Pods_PulentUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A1F0A0282E61A0A4BDFA751 /* Pods_PulentUITests.framework */; };
 		F022D7B3C4814E640646DEDA /* Pods_Pulent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCAF19DAFA4DEB7794E97063 /* Pods_Pulent.framework */; };
 /* End PBXBuildFile section */
@@ -43,7 +49,7 @@
 		20810EE934C94C2C96F7D828 /* Pods_PulentTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PulentTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CAF00CE21AF2E85005D8ACF /* Pulent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pulent.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CAF00D121AF2E85005D8ACF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2CAF00D321AF2E85005D8ACF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2CAF00D321AF2E85005D8ACF /* SongsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongsViewController.swift; sourceTree = "<group>"; };
 		2CAF00D621AF2E85005D8ACF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2CAF00D821AF2E87005D8ACF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2CAF00DB21AF2E87005D8ACF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -54,6 +60,12 @@
 		2CAF00ED21AF2E88005D8ACF /* PulentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PulentUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CAF00F121AF2E88005D8ACF /* PulentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulentUITests.swift; sourceTree = "<group>"; };
 		2CAF00F321AF2E88005D8ACF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2CAF010521AF32B2005D8ACF /* SongsCollectionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SongsCollectionView.xib; sourceTree = "<group>"; };
+		2CAF010721AF32D1005D8ACF /* SongsCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongsCollectionView.swift; sourceTree = "<group>"; };
+		2CAF010B21AF3486005D8ACF /* SongCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongCollectionViewCell.swift; sourceTree = "<group>"; };
+		2CAF010C21AF3486005D8ACF /* SongCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SongCollectionViewCell.xib; sourceTree = "<group>"; };
+		2CAF010F21AF34C4005D8ACF /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
+		2CAF011121AF358D005D8ACF /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = "/Users/matiascontreras/Documents/Repos/Desafio-para-devs-pulent/Pulent/Pulent/Extensions.swift"; sourceTree = "<absolute>"; };
 		5F9DB741E371AA78CFC5CC63 /* Pods-PulentUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PulentUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PulentUITests/Pods-PulentUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		69257BFF5D041840FBEF58B0 /* Pods-Pulent.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pulent.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Pulent/Pods-Pulent.debug.xcconfig"; sourceTree = "<group>"; };
 		7DFBEBAEF3A46F4A1B9E420D /* Pods-PulentUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PulentUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PulentUITests/Pods-PulentUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -115,11 +127,14 @@
 			isa = PBXGroup;
 			children = (
 				2CAF00D121AF2E85005D8ACF /* AppDelegate.swift */,
-				2CAF00D321AF2E85005D8ACF /* ViewController.swift */,
+				2CAF00D321AF2E85005D8ACF /* SongsViewController.swift */,
+				2CAF011321AF38B9005D8ACF /* BaseControllers */,
 				2CAF00D521AF2E85005D8ACF /* Main.storyboard */,
 				2CAF00D821AF2E87005D8ACF /* Assets.xcassets */,
 				2CAF00DA21AF2E87005D8ACF /* LaunchScreen.storyboard */,
+				2CAF010421AF3266005D8ACF /* Songs */,
 				2CAF00DD21AF2E87005D8ACF /* Info.plist */,
+				2CAF011121AF358D005D8ACF /* Extensions.swift */,
 			);
 			path = Pulent;
 			sourceTree = "<group>";
@@ -140,6 +155,41 @@
 				2CAF00F321AF2E88005D8ACF /* Info.plist */,
 			);
 			path = PulentUITests;
+			sourceTree = "<group>";
+		};
+		2CAF010421AF3266005D8ACF /* Songs */ = {
+			isa = PBXGroup;
+			children = (
+				2CAF010A21AF3415005D8ACF /* Cell */,
+				2CAF010921AF33FF005D8ACF /* Models */,
+				2CAF010721AF32D1005D8ACF /* SongsCollectionView.swift */,
+				2CAF010521AF32B2005D8ACF /* SongsCollectionView.xib */,
+			);
+			path = Songs;
+			sourceTree = "<group>";
+		};
+		2CAF010921AF33FF005D8ACF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2CAF010F21AF34C4005D8ACF /* Song.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2CAF010A21AF3415005D8ACF /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				2CAF010B21AF3486005D8ACF /* SongCollectionViewCell.swift */,
+				2CAF010C21AF3486005D8ACF /* SongCollectionViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		2CAF011321AF38B9005D8ACF /* BaseControllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BaseControllers;
 			sourceTree = "<group>";
 		};
 		66186B0A25A9643FB14E38DC /* Frameworks */ = {
@@ -274,8 +324,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CAF00DC21AF2E87005D8ACF /* LaunchScreen.storyboard in Resources */,
+				2CAF010E21AF3486005D8ACF /* SongCollectionViewCell.xib in Resources */,
 				2CAF00D921AF2E87005D8ACF /* Assets.xcassets in Resources */,
 				2CAF00D721AF2E85005D8ACF /* Main.storyboard in Resources */,
+				2CAF010621AF32B2005D8ACF /* SongsCollectionView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,8 +431,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2CAF00D421AF2E85005D8ACF /* ViewController.swift in Sources */,
+				2CAF00D421AF2E85005D8ACF /* SongsViewController.swift in Sources */,
+				2CAF011221AF358D005D8ACF /* Extensions.swift in Sources */,
+				2CAF010D21AF3486005D8ACF /* SongCollectionViewCell.swift in Sources */,
+				2CAF010821AF32D1005D8ACF /* SongsCollectionView.swift in Sources */,
 				2CAF00D221AF2E85005D8ACF /* AppDelegate.swift in Sources */,
+				2CAF011021AF34C4005D8ACF /* Song.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
