@@ -1,0 +1,6 @@
+framework module Pods_Pulent {
+  umbrella header "Pods-Pulent-umbrella.h"
+
+  export *
+  module * { export * }
+}
