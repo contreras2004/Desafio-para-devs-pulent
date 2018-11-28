@@ -23,6 +23,9 @@
 		2CAF011221AF358D005D8ACF /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAF011121AF358D005D8ACF /* Extensions.swift */; };
 		2CAF011521AF3923005D8ACF /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAF011421AF3923005D8ACF /* BaseViewController.swift */; };
 		2CAF011921AF3A36005D8ACF /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAF011821AF3A36005D8ACF /* BaseNavigationController.swift */; };
+		2CAF011D21AF3BB7005D8ACF /* NetworkingProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAF011C21AF3BB7005D8ACF /* NetworkingProtocols.swift */; };
+		2CAF011F21AF3BFA005D8ACF /* NetworkingEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAF011E21AF3BFA005D8ACF /* NetworkingEnums.swift */; };
+		2CAF012121AF3C9B005D8ACF /* NetworkingServers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAF012021AF3C9B005D8ACF /* NetworkingServers.swift */; };
 		5B4FE61992FEF257668E9478 /* Pods_PulentUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A1F0A0282E61A0A4BDFA751 /* Pods_PulentUITests.framework */; };
 		F022D7B3C4814E640646DEDA /* Pods_Pulent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCAF19DAFA4DEB7794E97063 /* Pods_Pulent.framework */; };
 /* End PBXBuildFile section */
@@ -70,6 +73,9 @@
 		2CAF011121AF358D005D8ACF /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = "/Users/matiascontreras/Documents/Repos/Desafio-para-devs-pulent/Pulent/Pulent/Extensions.swift"; sourceTree = "<absolute>"; };
 		2CAF011421AF3923005D8ACF /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		2CAF011821AF3A36005D8ACF /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
+		2CAF011C21AF3BB7005D8ACF /* NetworkingProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingProtocols.swift; sourceTree = "<group>"; };
+		2CAF011E21AF3BFA005D8ACF /* NetworkingEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingEnums.swift; sourceTree = "<group>"; };
+		2CAF012021AF3C9B005D8ACF /* NetworkingServers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingServers.swift; sourceTree = "<group>"; };
 		5F9DB741E371AA78CFC5CC63 /* Pods-PulentUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PulentUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PulentUITests/Pods-PulentUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		69257BFF5D041840FBEF58B0 /* Pods-Pulent.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pulent.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Pulent/Pods-Pulent.debug.xcconfig"; sourceTree = "<group>"; };
 		7DFBEBAEF3A46F4A1B9E420D /* Pods-PulentUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PulentUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PulentUITests/Pods-PulentUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -226,6 +232,9 @@
 		2CAF011B21AF3B38005D8ACF /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				2CAF011C21AF3BB7005D8ACF /* NetworkingProtocols.swift */,
+				2CAF011E21AF3BFA005D8ACF /* NetworkingEnums.swift */,
+				2CAF012021AF3C9B005D8ACF /* NetworkingServers.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -471,12 +480,15 @@
 			files = (
 				2CAF011921AF3A36005D8ACF /* BaseNavigationController.swift in Sources */,
 				2CAF00D421AF2E85005D8ACF /* SongsViewController.swift in Sources */,
+				2CAF011F21AF3BFA005D8ACF /* NetworkingEnums.swift in Sources */,
 				2CAF011221AF358D005D8ACF /* Extensions.swift in Sources */,
 				2CAF011521AF3923005D8ACF /* BaseViewController.swift in Sources */,
 				2CAF010D21AF3486005D8ACF /* SongCollectionViewCell.swift in Sources */,
+				2CAF012121AF3C9B005D8ACF /* NetworkingServers.swift in Sources */,
 				2CAF010821AF32D1005D8ACF /* SongsCollectionView.swift in Sources */,
 				2CAF00D221AF2E85005D8ACF /* AppDelegate.swift in Sources */,
 				2CAF011021AF34C4005D8ACF /* Song.swift in Sources */,
+				2CAF011D21AF3BB7005D8ACF /* NetworkingProtocols.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
