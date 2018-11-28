@@ -21,6 +21,8 @@
 		2CAF010E21AF3486005D8ACF /* SongCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CAF010C21AF3486005D8ACF /* SongCollectionViewCell.xib */; };
 		2CAF011021AF34C4005D8ACF /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAF010F21AF34C4005D8ACF /* Song.swift */; };
 		2CAF011221AF358D005D8ACF /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAF011121AF358D005D8ACF /* Extensions.swift */; };
+		2CAF011521AF3923005D8ACF /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAF011421AF3923005D8ACF /* BaseViewController.swift */; };
+		2CAF011921AF3A36005D8ACF /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAF011821AF3A36005D8ACF /* BaseNavigationController.swift */; };
 		5B4FE61992FEF257668E9478 /* Pods_PulentUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A1F0A0282E61A0A4BDFA751 /* Pods_PulentUITests.framework */; };
 		F022D7B3C4814E640646DEDA /* Pods_Pulent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCAF19DAFA4DEB7794E97063 /* Pods_Pulent.framework */; };
 /* End PBXBuildFile section */
@@ -66,6 +68,8 @@
 		2CAF010C21AF3486005D8ACF /* SongCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SongCollectionViewCell.xib; sourceTree = "<group>"; };
 		2CAF010F21AF34C4005D8ACF /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
 		2CAF011121AF358D005D8ACF /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = "/Users/matiascontreras/Documents/Repos/Desafio-para-devs-pulent/Pulent/Pulent/Extensions.swift"; sourceTree = "<absolute>"; };
+		2CAF011421AF3923005D8ACF /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		2CAF011821AF3A36005D8ACF /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		5F9DB741E371AA78CFC5CC63 /* Pods-PulentUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PulentUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PulentUITests/Pods-PulentUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		69257BFF5D041840FBEF58B0 /* Pods-Pulent.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pulent.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Pulent/Pods-Pulent.debug.xcconfig"; sourceTree = "<group>"; };
 		7DFBEBAEF3A46F4A1B9E420D /* Pods-PulentUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PulentUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PulentUITests/Pods-PulentUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -127,12 +131,12 @@
 			isa = PBXGroup;
 			children = (
 				2CAF00D121AF2E85005D8ACF /* AppDelegate.swift */,
-				2CAF00D321AF2E85005D8ACF /* SongsViewController.swift */,
-				2CAF011321AF38B9005D8ACF /* BaseControllers */,
 				2CAF00D521AF2E85005D8ACF /* Main.storyboard */,
 				2CAF00D821AF2E87005D8ACF /* Assets.xcassets */,
 				2CAF00DA21AF2E87005D8ACF /* LaunchScreen.storyboard */,
-				2CAF010421AF3266005D8ACF /* Songs */,
+				2CAF011721AF399B005D8ACF /* Modules */,
+				2CAF011321AF38B9005D8ACF /* BaseControllers */,
+				2CAF011621AF397D005D8ACF /* Components */,
 				2CAF00DD21AF2E87005D8ACF /* Info.plist */,
 				2CAF011121AF358D005D8ACF /* Extensions.swift */,
 			);
@@ -188,8 +192,26 @@
 		2CAF011321AF38B9005D8ACF /* BaseControllers */ = {
 			isa = PBXGroup;
 			children = (
+				2CAF011421AF3923005D8ACF /* BaseViewController.swift */,
+				2CAF011821AF3A36005D8ACF /* BaseNavigationController.swift */,
 			);
 			path = BaseControllers;
+			sourceTree = "<group>";
+		};
+		2CAF011621AF397D005D8ACF /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				2CAF010421AF3266005D8ACF /* Songs */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		2CAF011721AF399B005D8ACF /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				2CAF00D321AF2E85005D8ACF /* SongsViewController.swift */,
+			);
+			path = Modules;
 			sourceTree = "<group>";
 		};
 		66186B0A25A9643FB14E38DC /* Frameworks */ = {
@@ -431,8 +453,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CAF011921AF3A36005D8ACF /* BaseNavigationController.swift in Sources */,
 				2CAF00D421AF2E85005D8ACF /* SongsViewController.swift in Sources */,
 				2CAF011221AF358D005D8ACF /* Extensions.swift in Sources */,
+				2CAF011521AF3923005D8ACF /* BaseViewController.swift in Sources */,
 				2CAF010D21AF3486005D8ACF /* SongCollectionViewCell.swift in Sources */,
 				2CAF010821AF32D1005D8ACF /* SongsCollectionView.swift in Sources */,
 				2CAF00D221AF2E85005D8ACF /* AppDelegate.swift in Sources */,
