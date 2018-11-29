@@ -12,7 +12,8 @@ import Foundation
 //we can add multiple endpoints, this way we can just look at this file and see the main structure of each endpoint :)
 
 struct SearchSongEndpoint: Endpoint{
+    var urlParams: Codable? = nil
     var server: Server = ServerDefault()
-    var api: Api? = .search
+    var api: Api = .search
     var method: HTTPMethod = .get
 }

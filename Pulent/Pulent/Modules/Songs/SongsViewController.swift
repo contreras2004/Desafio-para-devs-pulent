@@ -9,14 +9,72 @@
 import UIKit
 
 class SongsViewController: BaseViewController {
-
-    @IBOutlet weak var songsCollectionView: SongsCollectionView!
+    
+    
+    @IBOutlet weak var songsTableView: SongsTableView!
+    var songsRequestModel = SearchSongRequestModel()
+    var searchTerm = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        songsTableView.delegate = self
+        searchController.delegate = self
+        searchController.searchResultsUpdater = self
     }
+    
+    func fetchSongs(searchTerm: String){
+        //delete all songs if the searchTerm has changed
+        if searchTerm != self.searchTerm{
+            songsTableView.songs.removeAll()
+        }
+        
+        //configure the request
+        debugPrint("The search term wil be: \(searchTerm)")
+        songsRequestModel.term = searchTerm
+        songsRequestModel.offset = songsTableView.songs.count
+        // Do any additional setup after loading the view, typically from a nib.
+        SongsManager.shared.fetchSongs(searchSongRequestModel: songsRequestModel) { (songs, error) in
+            //save the searchTerm temporarily so we can scroll down and search again but with offset
+            self.searchTerm = searchTerm
+            if let error = error{
+                debugPrint("Error fetching data: \(error)")
+                self.songsTableView.showLoadingInTableView(show: false)
+                return
+            }
+            if let songs = songs{
+                self.addSongsToTableView(songs: songs)
+            }
+        }
+    }
+    
+    func addSongsToTableView(songs: [Song]){
+        //check if the songs are already in the array
+        debugPrint("Songs: \(songs.count)")
+        let diferenceArray = songs.filter { !self.songsTableView.songs.contains($0) }
+        if diferenceArray.count > 0{
+            self.songsTableView.songs = self.songsTableView.songs + diferenceArray
+            self.songsRequestModel.offset = self.songsRequestModel.offset + songs.count
+            self.songsTableView.showLoadingInTableView(show: false)
+        }
+    }
+}
 
+extension SongsViewController: SongsTableViewDelegate{
+    func didTap(cell: SongTableViewCell) {
+        debugPrint("did tap cell: \(cell)")
+    }
+    
+    func tableViewScrolledToEnd() {
+        fetchSongs(searchTerm: searchTerm)
+    }
+}
 
+extension SongsViewController: UISearchControllerDelegate, UISearchResultsUpdating, UISearchBarDelegate{
+    func updateSearchResults(for searchController: UISearchController) {
+        
+        if let searchString = searchController.searchBar.text, !searchString.isEmpty{
+            fetchSongs(searchTerm: searchString.replacingOccurrences(of: " ", with: "+"))
+        }
+    }
 }
 

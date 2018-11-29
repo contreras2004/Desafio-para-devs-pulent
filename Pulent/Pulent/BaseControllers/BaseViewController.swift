@@ -26,7 +26,7 @@ class BaseViewController: UIViewController {
         self.definesPresentationContext = true
         searchController = UISearchController(searchResultsController: nil)
         searchController.dimsBackgroundDuringPresentation = false
-        searchController.definesPresentationContext = true
+        //searchController.definesPresentationContext = true
         self.navigationItem.searchController = searchController
         
     }
