@@ -10,10 +10,14 @@ import UIKit
 
 class SongsViewController: BaseViewController {
     
+    enum Segues: String{
+        case toDetails
+    }
     
     @IBOutlet weak var songsTableView: SongsTableView!
     var songsRequestModel = SearchSongRequestModel()
     var searchTerm = ""
+    var selectedSong : Song? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,16 +56,28 @@ class SongsViewController: BaseViewController {
         debugPrint("Songs: \(songs.count)")
         let diferenceArray = songs.filter { !self.songsTableView.songs.contains($0) }
         if diferenceArray.count > 0{
+            self.songsTableView.removeMessage()
             self.songsTableView.songs = self.songsTableView.songs + diferenceArray
             self.songsRequestModel.offset = self.songsRequestModel.offset + songs.count
             self.songsTableView.showLoadingInTableView(show: false)
+        }
+        else{
+            self.songsTableView.showMessage(type: .noSearchResults)
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? WebViewController{
+            destination.title = self.selectedSong?.trackName
+            destination.url = self.selectedSong?.collectionViewUrl
         }
     }
 }
 
 extension SongsViewController: SongsTableViewDelegate{
     func didTap(cell: SongTableViewCell) {
-        debugPrint("did tap cell: \(cell)")
+        self.selectedSong = cell.song
+        self.performSegue(withIdentifier: Segues.toDetails.rawValue, sender: self)
     }
     
     func tableViewScrolledToEnd() {

@@ -33,6 +33,32 @@ extension UIView {
         constraints.append(NSLayoutConstraint(item: self, attribute: .bottom, relatedBy: .equal, toItem: parentView, attribute: .bottom, multiplier: 1.0, constant: 0))
         parentView.addConstraints(constraints)
     }
+    
+    /*for showing the error messages*/
+    func showMessage(type: MessageType, loopAnimation: Bool? = false){
+        //check if there is another error message on screen with the same message
+        for view in self.subviews{
+            if let view = view as? MessageView, view.messageType == type{
+                return
+            }
+        }
+        
+        let messageView = MessageView()
+        messageView.loopAnimation = loopAnimation!
+        messageView.messageType = type
+        //if let messageView = self.messageView{
+        self.addSubview(messageView)
+        messageView.layoutAttachAll(to: self)
+        //}
+    }
+    
+    func removeMessage(){
+        for view in self.subviews{
+            if view is MessageView{
+                view.removeFromSuperview()
+            }
+        }
+    }
 }
 
 

@@ -15,6 +15,13 @@
 		2C1851D921AF891E0046C1E1 /* SongTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1851D721AF891E0046C1E1 /* SongTableViewCell.swift */; };
 		2C1851DA21AF891E0046C1E1 /* SongTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C1851D821AF891E0046C1E1 /* SongTableViewCell.xib */; };
 		2C1851E021AF8BA10046C1E1 /* SongsTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C1851DF21AF8BA10046C1E1 /* SongsTableView.xib */; };
+		2C52AE1D21B09C180049B9D1 /* empty-results.json in Resources */ = {isa = PBXBuildFile; fileRef = 2C52AE1A21B09C170049B9D1 /* empty-results.json */; };
+		2C52AE1E21B09C180049B9D1 /* no-connection.json in Resources */ = {isa = PBXBuildFile; fileRef = 2C52AE1B21B09C170049B9D1 /* no-connection.json */; };
+		2C52AE1F21B09C180049B9D1 /* generic-error.json in Resources */ = {isa = PBXBuildFile; fileRef = 2C52AE1C21B09C180049B9D1 /* generic-error.json */; };
+		2C52AE2121B09C3B0049B9D1 /* MessageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C52AE2021B09C3B0049B9D1 /* MessageView.xib */; };
+		2C52AE2321B09C7A0049B9D1 /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C52AE2221B09C7A0049B9D1 /* MessageView.swift */; };
+		2C52AE2621B0A0220049B9D1 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C52AE2521B0A0220049B9D1 /* WebViewController.swift */; };
+		2C52AE2C21B0AB2E0049B9D1 /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = 2C52AE2B21B0AB2E0049B9D1 /* loading.json */; };
 		2CAF00D221AF2E85005D8ACF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAF00D121AF2E85005D8ACF /* AppDelegate.swift */; };
 		2CAF00D421AF2E85005D8ACF /* SongsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAF00D321AF2E85005D8ACF /* SongsViewController.swift */; };
 		2CAF00D721AF2E85005D8ACF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CAF00D521AF2E85005D8ACF /* Main.storyboard */; };
@@ -63,6 +70,13 @@
 		2C1851D721AF891E0046C1E1 /* SongTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongTableViewCell.swift; sourceTree = "<group>"; };
 		2C1851D821AF891E0046C1E1 /* SongTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SongTableViewCell.xib; sourceTree = "<group>"; };
 		2C1851DF21AF8BA10046C1E1 /* SongsTableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = SongsTableView.xib; path = Pulent/Components/Songs/SongsTableView.xib; sourceTree = SOURCE_ROOT; };
+		2C52AE1A21B09C170049B9D1 /* empty-results.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "empty-results.json"; sourceTree = "<group>"; };
+		2C52AE1B21B09C170049B9D1 /* no-connection.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "no-connection.json"; sourceTree = "<group>"; };
+		2C52AE1C21B09C180049B9D1 /* generic-error.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "generic-error.json"; sourceTree = "<group>"; };
+		2C52AE2021B09C3B0049B9D1 /* MessageView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageView.xib; sourceTree = "<group>"; };
+		2C52AE2221B09C7A0049B9D1 /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
+		2C52AE2521B0A0220049B9D1 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		2C52AE2B21B0AB2E0049B9D1 /* loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
 		2CAF00CE21AF2E85005D8ACF /* Pulent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pulent.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CAF00D121AF2E85005D8ACF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2CAF00D321AF2E85005D8ACF /* SongsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongsViewController.swift; sourceTree = "<group>"; };
@@ -162,6 +176,35 @@
 			path = ServerResponseModels;
 			sourceTree = "<group>";
 		};
+		2C52AE1821B09BE10049B9D1 /* MessageView */ = {
+			isa = PBXGroup;
+			children = (
+				2C52AE2021B09C3B0049B9D1 /* MessageView.xib */,
+				2C52AE2221B09C7A0049B9D1 /* MessageView.swift */,
+				2C52AE1921B09C090049B9D1 /* LottieAnimations */,
+			);
+			path = MessageView;
+			sourceTree = "<group>";
+		};
+		2C52AE1921B09C090049B9D1 /* LottieAnimations */ = {
+			isa = PBXGroup;
+			children = (
+				2C52AE2B21B0AB2E0049B9D1 /* loading.json */,
+				2C52AE1A21B09C170049B9D1 /* empty-results.json */,
+				2C52AE1C21B09C180049B9D1 /* generic-error.json */,
+				2C52AE1B21B09C170049B9D1 /* no-connection.json */,
+			);
+			path = LottieAnimations;
+			sourceTree = "<group>";
+		};
+		2C52AE2421B09FFC0049B9D1 /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				2C52AE2521B0A0220049B9D1 /* WebViewController.swift */,
+			);
+			path = WebView;
+			sourceTree = "<group>";
+		};
 		2CAF00C521AF2E85005D8ACF = {
 			isa = PBXGroup;
 			children = (
@@ -257,6 +300,8 @@
 		2CAF011721AF399B005D8ACF /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				2C52AE2421B09FFC0049B9D1 /* WebView */,
+				2C52AE1821B09BE10049B9D1 /* MessageView */,
 				2CAF011A21AF3B22005D8ACF /* Songs */,
 				2CAF011B21AF3B38005D8ACF /* Networking */,
 			);
@@ -414,10 +459,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C52AE1D21B09C180049B9D1 /* empty-results.json in Resources */,
 				2C1851DA21AF891E0046C1E1 /* SongTableViewCell.xib in Resources */,
 				2C1851E021AF8BA10046C1E1 /* SongsTableView.xib in Resources */,
+				2C52AE2121B09C3B0049B9D1 /* MessageView.xib in Resources */,
+				2C52AE2C21B0AB2E0049B9D1 /* loading.json in Resources */,
 				2CAF00DC21AF2E87005D8ACF /* LaunchScreen.storyboard in Resources */,
+				2C52AE1E21B09C180049B9D1 /* no-connection.json in Resources */,
 				2CAF00D921AF2E87005D8ACF /* Assets.xcassets in Resources */,
+				2C52AE1F21B09C180049B9D1 /* generic-error.json in Resources */,
 				2CAF00D721AF2E85005D8ACF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -534,6 +584,8 @@
 				2CAF011021AF34C4005D8ACF /* SongModels.swift in Sources */,
 				2CAF011D21AF3BB7005D8ACF /* NetworkingProtocols.swift in Sources */,
 				2C1851D921AF891E0046C1E1 /* SongTableViewCell.swift in Sources */,
+				2C52AE2621B0A0220049B9D1 /* WebViewController.swift in Sources */,
+				2C52AE2321B09C7A0049B9D1 /* MessageView.swift in Sources */,
 				2C1851D121AF5AD90046C1E1 /* SearchSongRequestModel.swift in Sources */,
 				2C1851CC21AF56800046C1E1 /* SongsManager.swift in Sources */,
 				2C1851CE21AF57F60046C1E1 /* NetworkingManager.swift in Sources */,
