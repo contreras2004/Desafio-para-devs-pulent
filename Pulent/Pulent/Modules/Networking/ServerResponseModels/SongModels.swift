@@ -19,35 +19,35 @@ struct Song: Codable, Equatable{
         return lhs.trackId == rhs.trackId && lhs.artistId == rhs.artistId
     }
     
-    let wrapperType: String?
-    let kind: String?
-    let artistId: Int?
-    let collectionId: Int?
-    let trackId: Int?
-    let artistName: String?
-    let collectionName: String?
-    let trackName: String?
-    let collectionCensoredName: String?
-    let trackCensoredName: String?
-    let artistViewUrl: URL? //https://itunes.apple.com/us/artist/alan-walker/1062085272?uo=4",
-    let collectionViewUrl: URL? //https://itunes.apple.com/us/album/faded/1196294554?i=1196294581&uo=4",
-    let trackViewUrl: URL? // https://itunes.apple.com/us/album/faded/1196294554?i=1196294581&uo=4",
-    let previewUrl: URL? // https://audio-ssl.itunes.apple.com/apple-assets-us-std-000001/AudioPreview111/v4/90/b5/01/90b501ac-78bd-a7c1-6726-8f82fe0c2b4e/mzaf_3304804784910350487.plus.aac.p.m4a",
-    let artworkUrl30: URL? // https://is4-ssl.mzstatic.com/image/thumb/Music122/v4/b8/ab/93/b8ab934a-810e-933a-135a-5901bfd94a73/source/30x30bb.jpg",
-    let artworkUrl60: URL? // https://is4-ssl.mzstatic.com/image/thumb/Music122/v4/b8/ab/93/b8ab934a-810e-933a-135a-5901bfd94a73/source/60x60bb.jpg",
-    let artworkUrl100: URL? // https://is4-ssl.mzstatic.com/image/thumb/Music122/v4/b8/ab/93/b8ab934a-810e-933a-135a-5901bfd94a73/source/100x100bb.jpg",
-    let collectionPrice: Double?
-    let trackPrice: Double?
-    let releaseDate: Date?//2015-12-03T08:00:00Z",  "yyyy-MM-dd'T'HH:mm:ssZ"
-    let collectionExplicitness: String?
-    let trackExplicitness: String?
-    let discCount: Int?
-    let discNumber: Int?
-    let trackCount: Int?
-    let trackNumber: Int?
-    let trackTimeMillis: Int?
-    let country: String?
-    let currency: String?
-    let primaryGenreName: String?
-    let isStreamable: Bool?
+    var wrapperType: String? = nil
+    var kind: String?  = nil
+    var artistId: Int?  = nil
+    var collectionId: Int?  = nil
+    var trackId: Int? = nil
+    var artistName: String? = nil
+    var collectionName: String? = nil
+    var trackName: String? = nil
+    var collectionCensoredName: String? = nil
+    var trackCensoredName: String? = nil
+    var artistViewUrl: URL? = nil
+    var collectionViewUrl: URL? = nil
+    var trackViewUrl: URL? = nil
+    var previewUrl: URL? = nil
+    var artworkUrl30: URL? = nil
+    var artworkUrl60: URL? = nil
+    var artworkUrl100: URL? = nil
+    var collectionPrice: Double? = nil
+    var trackPrice: Double? = nil
+    var releaseDate: Date?  = nil//datefimeFormat: 2015-12-03T08:00:00Z" -> "yyyy-MM-dd'T'HH:mm:ssZ"
+    var collectionExplicitness: String? = nil
+    var trackExplicitness: String? = nil
+    var discCount: Int? = nil
+    var discNumber: Int? = nil
+    var trackCount: Int? = nil
+    var trackNumber: Int? = nil
+    var trackTimeMillis: Int? = nil
+    var country: String? = nil
+    var currency: String? = nil
+    var primaryGenreName: String? = nil
+    var isStreamable: Bool? = nil
 }
