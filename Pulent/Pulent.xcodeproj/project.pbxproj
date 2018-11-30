@@ -21,7 +21,7 @@
 		2C52AE2121B09C3B0049B9D1 /* MessageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C52AE2021B09C3B0049B9D1 /* MessageView.xib */; };
 		2C52AE2321B09C7A0049B9D1 /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C52AE2221B09C7A0049B9D1 /* MessageView.swift */; };
 		2C52AE2621B0A0220049B9D1 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C52AE2521B0A0220049B9D1 /* WebViewController.swift */; };
-		2C52AE2C21B0AB2E0049B9D1 /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = 2C52AE2B21B0AB2E0049B9D1 /* loading.json */; };
+		2C52AE3021B0AE180049B9D1 /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = 2C52AE2F21B0AE170049B9D1 /* loading.json */; };
 		2CAF00D221AF2E85005D8ACF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAF00D121AF2E85005D8ACF /* AppDelegate.swift */; };
 		2CAF00D421AF2E85005D8ACF /* SongsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAF00D321AF2E85005D8ACF /* SongsViewController.swift */; };
 		2CAF00D721AF2E85005D8ACF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CAF00D521AF2E85005D8ACF /* Main.storyboard */; };
@@ -76,7 +76,7 @@
 		2C52AE2021B09C3B0049B9D1 /* MessageView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageView.xib; sourceTree = "<group>"; };
 		2C52AE2221B09C7A0049B9D1 /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
 		2C52AE2521B0A0220049B9D1 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
-		2C52AE2B21B0AB2E0049B9D1 /* loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
+		2C52AE2F21B0AE170049B9D1 /* loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
 		2CAF00CE21AF2E85005D8ACF /* Pulent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pulent.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CAF00D121AF2E85005D8ACF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2CAF00D321AF2E85005D8ACF /* SongsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongsViewController.swift; sourceTree = "<group>"; };
@@ -189,7 +189,7 @@
 		2C52AE1921B09C090049B9D1 /* LottieAnimations */ = {
 			isa = PBXGroup;
 			children = (
-				2C52AE2B21B0AB2E0049B9D1 /* loading.json */,
+				2C52AE2F21B0AE170049B9D1 /* loading.json */,
 				2C52AE1A21B09C170049B9D1 /* empty-results.json */,
 				2C52AE1C21B09C180049B9D1 /* generic-error.json */,
 				2C52AE1B21B09C170049B9D1 /* no-connection.json */,
@@ -463,7 +463,7 @@
 				2C1851DA21AF891E0046C1E1 /* SongTableViewCell.xib in Resources */,
 				2C1851E021AF8BA10046C1E1 /* SongsTableView.xib in Resources */,
 				2C52AE2121B09C3B0049B9D1 /* MessageView.xib in Resources */,
-				2C52AE2C21B0AB2E0049B9D1 /* loading.json in Resources */,
+				2C52AE3021B0AE180049B9D1 /* loading.json in Resources */,
 				2CAF00DC21AF2E87005D8ACF /* LaunchScreen.storyboard in Resources */,
 				2C52AE1E21B09C180049B9D1 /* no-connection.json in Resources */,
 				2CAF00D921AF2E87005D8ACF /* Assets.xcassets in Resources */,

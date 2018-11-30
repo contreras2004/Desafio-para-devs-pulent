@@ -14,11 +14,11 @@ class SongsManager{
     static let shared = SongsManager()
     var songs = [Song]()
     
-    func fetchSongs(searchSongRequestModel: SearchSongRequestModel, handler: (([Song]?, Error?) -> Void)? = nil) {
+    func fetchSongs(searchSongRequestModel: SearchSongRequestModel, handler: (([Song]?, NSError?) -> Void)? = nil) {
         var endpoint = SearchSongEndpoint()
         endpoint.urlParams = searchSongRequestModel
         
-        NetworkingManager().request(endpoint: endpoint) { (searchResponseModel: SearchResponseModel?, error: Error?) in
+        NetworkingManager().request(endpoint: endpoint) { (searchResponseModel: SearchResponseModel?, error: NSError?) in
             if let songs = searchResponseModel?.results{
                 self.songs = songs
             }

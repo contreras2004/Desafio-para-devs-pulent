@@ -42,6 +42,9 @@ class SongsViewController: BaseViewController {
             self.searchTerm = searchTerm
             if let error = error{
                 debugPrint("Error fetching data: \(error)")
+                self.songsTableView.showMessage(error: error, action: {
+                    self.fetchSongs(searchTerm: searchTerm)
+                })
                 self.songsTableView.showLoadingInTableView(show: false)
                 return
             }

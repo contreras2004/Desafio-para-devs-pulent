@@ -34,8 +34,8 @@ extension UIView {
         parentView.addConstraints(constraints)
     }
     
-    /*for showing the error messages*/
-    func showMessage(type: MessageType, loopAnimation: Bool? = false){
+    /*for showing the messages*/
+    func showMessage(type: MessageType, loopAnimation: Bool? = false, action: (() -> Void)? = nil){
         //check if there is another error message on screen with the same message
         for view in self.subviews{
             if let view = view as? MessageView, view.messageType == type{
@@ -44,12 +44,27 @@ extension UIView {
         }
         
         let messageView = MessageView()
+        if let action = action{
+            messageView.action = action
+        }
+        
         messageView.loopAnimation = loopAnimation!
         messageView.messageType = type
-        //if let messageView = self.messageView{
         self.addSubview(messageView)
         messageView.layoutAttachAll(to: self)
-        //}
+    }
+    
+    func showMessage(error: NSError, loopAnimation: Bool? = false, action: (() -> Void)? = nil){
+        //special for showing error messages
+        var errorType = MessageType.genericError
+        debugPrint(error.code)
+        switch error.code{
+        case -1009:
+            errorType = .noConnection
+        default:
+            break
+        }
+        self.showMessage(type: errorType, loopAnimation: loopAnimation, action: action)
     }
     
     func removeMessage(){
@@ -60,7 +75,6 @@ extension UIView {
         }
     }
 }
-
 
 /*DESIGNABLE EXTENSIONS*/
 extension UIView {

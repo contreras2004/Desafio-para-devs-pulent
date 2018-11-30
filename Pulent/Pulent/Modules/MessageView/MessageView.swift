@@ -36,6 +36,7 @@ enum MessageType{
 
 class MessageView: UIView {
     
+    @IBOutlet weak var actionButton: UIButton!
     @IBOutlet weak var animationCanvas: UIView!
     @IBOutlet weak var errorMessageLbl: UILabel!
     var messageType: MessageType = .genericError {
@@ -45,6 +46,11 @@ class MessageView: UIView {
         }
     }
     var loopAnimation: Bool = false
+    var action: (() -> ())? {
+        didSet{
+            actionButton.isHidden = false
+        }
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -68,8 +74,11 @@ class MessageView: UIView {
         animationView.frame = animationCanvas.frame
         animationView.frame.origin = CGPoint.zero
         animationView.contentMode = .scaleAspectFit
-        animationView.backgroundColor = .clear
-        animationCanvas.backgroundColor = .clear
+        //animationView.backgroundColor = .clear
+        //animationView.shadowColor = .clear
+        //animationView.tintColor = .clear
+        //animationCanvas.backgroundColor = .clear
+        self.addSubview(animationView)
         animationCanvas.addSubview(animationView)
         animationView.layoutAttachAll(to: animationCanvas)
         animationView.loopAnimation = loopAnimation
@@ -80,5 +89,9 @@ class MessageView: UIView {
         for view in animationCanvas.subviews{
             view.removeFromSuperview()
         }
+    }
+    
+    @IBAction func actionButton(_ sender: Any) {
+        self.action?()
     }
 }

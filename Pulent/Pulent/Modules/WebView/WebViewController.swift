@@ -16,13 +16,13 @@ class WebViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.webView.showMessage(type: .loading, loopAnimation: true)
         self.webView.navigationDelegate = self
         self.navigationController?.navigationBar.prefersLargeTitles = false
         self.loadUrl()
     }
     
     func loadUrl(){
+        self.webView.showMessage(type: .loading, loopAnimation: true)
         if let url = url {
             self.webView.load(URLRequest(url: url))
         }
@@ -32,7 +32,7 @@ class WebViewController: UIViewController {
 extension WebViewController: WKNavigationDelegate{
     func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
         debugPrint("Error: \(error)")
-        self.view.showMessage(type: .genericError)
+        self.webView.showMessage(type: .genericError)
     }
     
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
@@ -40,14 +40,12 @@ extension WebViewController: WKNavigationDelegate{
     }
     
     func webView(_ webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError error: Error) {
-        debugPrint("Error: \(error)")
-        /*if error.code == -1001 { // TIMED OUT:
-            
-        } else if error.code == -1003 { // SERVER CANNOT BE FOUND
-            
-        } else if error.code == -1100 { // URL NOT FOUND ON SERVER
-            
-        }*/
-        self.view.showMessage(type: .genericError)
+        //if error.code == -1009{ // TIMED OUT:
+        self.webView.showMessage(error: error as NSError) {
+            //try again...
+            self.webView.removeMessage()
+            self.loadUrl()
+        }
+        return
     }
 }

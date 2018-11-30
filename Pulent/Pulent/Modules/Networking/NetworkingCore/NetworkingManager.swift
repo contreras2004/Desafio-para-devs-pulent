@@ -12,7 +12,7 @@ import Alamofire
 struct NetworkingManager{
     
     //we define this function as a generic so we dont have to do the same for each object type that we need to fetch from the server
-    func request<T: Codable>(endpoint: Endpoint, completionHandler : @escaping (T?, Error?) -> ()) {
+    func request<T: Codable>(endpoint: Endpoint, completionHandler : @escaping (T?, NSError?) -> ()) {
        
         let url = urlWithParams(endpoint: endpoint)
         
@@ -48,14 +48,20 @@ struct NetworkingManager{
                     }
                     catch{
                         debugPrint("Error while trying to decode response: \(error)")
+                        let error = NSError.init(domain: urlRequest.url?.absoluteString ?? "Domain could not be generated",
+                                                         code: response.response?.statusCode ?? 0,
+                                                         userInfo: ["error" : error.localizedDescription])
                         completionHandler(nil, error)
                     }
                 }
                 
             case .failure(let error):
+                debugPrint(response.response?.statusCode)
+                let errorWithCode = NSError.init(domain: urlRequest.url?.absoluteString ?? "Domain could not be generated",
+                                                 code: response.response?.statusCode ?? -1009,
+                                                 userInfo: ["error" : error.localizedDescription])
                 debugPrint("Error in networking request: \(error)")
-                completionHandler(nil, error)
-                
+                completionHandler(nil, errorWithCode)
             }
             return
         }
